@@ -39,9 +39,7 @@ bool Exec::execute(bool & itr)
     char *execName = new char[str.length()];
     char *arg = new char[str.length()];
     strcpy(execName,temp.c_str());
-    unsigned i = 1; 
-    
-    commandAr[0] = execName;
+    unsigned i = 0; 
     
     while (str.find(" ") < 1000) {
         temp = str.substr(0, str.find(" ")); 
