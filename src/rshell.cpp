@@ -24,7 +24,7 @@ void rshell::tokenize(char inputLine[])
         {
             command = command + " " + temp.substr(0, temp.size()-1);
             commands.push_back(new Exec(command));
-            commands.push_back(new Con(temp));
+            commands.push_back(new Con(";"));
             command = "";
         }
         else if (temp.find("#") != string::npos)
@@ -57,12 +57,12 @@ void rshell::run()
     {
     	cout << "$";
     	getline(cin, input);
-    	char ar[input.size()];
+	char ar[input.size()];
     	strcpy(ar, input.c_str()); 
         tokenize(ar);
         
     	bool ToRun = true; 
-    	for (int a = 0; a < commands.size(); a++)
+    	for (unsigned a = 0; a < commands.size(); a++)
     	{
     		if(commands.at(a)->showString() == "#")
     			break;

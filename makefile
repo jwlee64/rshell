@@ -1,9 +1,9 @@
 CC = g++
-CC_FLAGS = -Wall -pedantic -std=c++11 -03
+CC_FLAGS = -Wall -pedantic -std=c++11
 
 EXECUTABLE =rshell
 SOURCEDIR = src
-BUILDDIR = bin 
+BUILDDIR = bin
 
 SOURCES = $(wildcard $(SOURCEDIR)/*.cpp)
 OBJECTS = $(SOURCES:.cpp=.o)
