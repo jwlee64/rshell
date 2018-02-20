@@ -9,16 +9,16 @@ SOURCES = $(wildcard $(SOURCEDIR)/*.cpp)
 OBJECTS = $(SOURCES:.cpp=.o)
 
 all: $(OBJECTS)
-		mkdir -p $(BUILDDIR)
-		$(CC) $(OBJECTS) -o $(BUILDDIR)/$(EXECUTABLE)
+	mkdir -p $(BUILDDIR)
+	$(CC) $(OBJECTS) -o $(BUILDDIR)/$(EXECUTABLE)
 
 rshell: $(OBJECTS)
-		mkdir -p $(BUILDDIR)
-		$(CC) $(OBJECTS) -o $(BUILDDIR)/$(EXECUTABLE)
+	mkdir -p $(BUILDDIR)
+	$(CC) $(OBJECTS) -o $(BUILDDIR)/$(EXECUTABLE)
 		
-%.o %.cpp
+%.o: %.cpp
 	$(CC) -c $(CC_FLAGS) $< -o $@
 	
 clean:
-		rm -f $(EXECUTABLE) $(OBJECTS)
-		rm -rf $(BUILDDIR)
+	rm -f $(EXECUTABLE) $(OBJECTS)
+	rm -rf $(BUILDDIR)
