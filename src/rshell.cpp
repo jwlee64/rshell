@@ -24,7 +24,7 @@ void rshell::tokenize(char inputLine[])
         {
             command = command + " " + temp.substr(0, temp.size()-1);
             commands.push_back(new Exec(command));
-            commands.push_back(new Con(temp));
+            commands.push_back(new Con(";"));
             command = "";
         }
         else if (temp.find("#") != string::npos)
@@ -62,7 +62,7 @@ void rshell::run()
         tokenize(ar);
         
     	bool ToRun = true; 
-    	for (int a = 0; a < commands.size(); a++)
+    	for (unsigned a = 0; a < commands.size(); a++)
     	{
     		if(commands.at(a)->showString() == "#")
     			break;
