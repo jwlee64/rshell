@@ -1,7 +1,9 @@
-# assignment2
+RShell
+by Josiah Lee and Luis Chelala
 
-In this assignment, please finish two things:
+This program receives a user inputted line parses it into separate commands and connectors and then executes the command through usr/bin.
 
-1 In "CS100_Assignment1.pdf", finish setting up your “Assignment” github repo, and writing an epic for assignment 2.
-
-2 Finish everything mentioned in "CS100_Assignment2.pdf".
+Bugs
+- first we had some problems with the branching and merging. we at the moment so not know how to fix it and will do later
+- second we had problems with commands failing and breaking the line 
+- third cd does not work

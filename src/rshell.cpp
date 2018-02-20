@@ -57,7 +57,7 @@ void rshell::run()
     {
     	cout << "$";
     	getline(cin, input);
-    	char ar[input.size()];
+	char ar[input.size()];
     	strcpy(ar, input.c_str()); 
         tokenize(ar);
         
@@ -67,7 +67,7 @@ void rshell::run()
     		if(commands.at(a)->showString() == "#")
     			break;
     		if (commands.at(a)->showString() ==  "exit")
-    			{ cout <<"exit rshell"; return ;}
+    			{ cout <<"exit rshell"<<endl; return ;}
     		ToRun = commands.at(a)->execute(ToRun);
         }
         commands.clear();

@@ -1,7 +1,7 @@
 CC = g++
 CC_FLAGS = -Wall -pedantic -std=c++11
 
-EXECUTABLE = rshell
+EXECUTABLE =rshell
 SOURCEDIR = src
 BUILDDIR = bin
 
